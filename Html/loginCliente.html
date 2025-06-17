@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginCliente</title>
+    <link rel="stylesheet" href="/FontAwesome/fontawesome-free-6.7.2-web/css/all.css">
+    <link rel="stylesheet" href="/Styles/styleLoginCliente.css">
+    <link rel="stylesheet" href="/Styles/variables.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__cont">
+            <div class="header__item">
+                <img src="/image/logo.png" alt="logo" class="header__item--logo">
+                <h1 class="header__item--tex">LMC Bank</h1>
+            </div>
+            <div class="header__menu--toggle" id="menu__toggle"></div>
+            <nav class="header__menu--nav" id="menu__nav">
+                <ul class="list__cont">
+                    <li class="list__item"><a href="/Html/CentroAyuda.html" class="list__item--icon" title="ir a centro de ayuda"><i class="fa-regular fa-envelope"></i>Centro de Ayuda</a></li>
+                    <li class="list__item"><a href="#" class="list__item--icon" title="ir a libro de reclamaciones"><i class="fa-regular fa-address-book"></i>Libro de Reclamaciones</a></li>
+                    <li class="list__item"><a href="#" class="list__item--icon" title="ir a ubicacion"><i class="fa-solid fa-magnifying-glass-location"></i>Puntos de Ubicación</a></li>
+                    <li class="list__item"><a href="/Html/RegistroCliente.html" class="list__item--icon" title="ir a ubicacion"><i class="fa-solid fa-user-plus"></i>Crear Cuenta</a></li>
+                    <li class="list__item"><a href="../index.html" class="list__item--icon" title="ir a ubicacion"><i class="fa-solid fa-house-chimney"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="main">
+        <!-- Cuadro de alerta -->
+        <div id="alertaModal" class="modal">
+            <div class="modal-content">
+                <p id="mensajeModal"></p>
+                <div id="botonesConfirmacion" style="display: none;">
+                    <button onclick="redirigirLogin()">continuar</button>
+                    <button onclick="cancelarLogin()">volver</button>
+                </div>
+                <div id="botonesError" style="display: none;">
+                    <button onclick="cerrarAlerta()">Aceptar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__container">
+            <div class="main__cont">
+                <div class="main__item">
+                    <h1 class="main__item--text">"Financiamos tus sueños,</h1>
+                    <h1 class="main__item--text">respaldamos tu confianza"</h1>
+                </div>
+
+                <div class="main__item">
+                    <form action="" class="main__item--formulario">
+                        <div class="form__item--tittle">
+                            <h1>Inicia Sesión</h1>
+                        </div>
+
+                        <div class="form__item">
+                            <label for="tipdoc" class="form__item--label">Tipo de Documento:</label>
+                            <select name="tipdoc" id="tipdoc" class="form__item--select">
+                                <option value="dni">DNI</option>
+                                <option value="carnet de extranjeria">Carnet de Extranjeria</option>
+                                <option value="pasaporte">Pasaporte</option>
+                            </select>
+                        </div>
+
+                        <div class="form__item">
+                            <label for="numdocument" class="form__item--label">Número de Documento:</label>
+                            <input type="text" id="numdocument" placeholder="Número de Documento" class="form__item--input" required>        
+                        </div>
+
+                        <div class="form__item">
+                            <label for="users" class="form__item--label">Usuario:</label>
+                            <input type="text" id="users" placeholder="Ingrese su Usuario" class="form__item--input" required>
+                        </div>
+
+                        <div class="form__item">
+                            <label for="passwords" class="form__item--label">Contraseña:</label>
+                            <input type="password" id="passwords" placeholder="Ingrese su Contraseña" class="form__item--inputpassword" required>
+                            <span class="form__item--span"><i class="fa-solid fa-eye" id="eye" onclick="toggle()"></i></span>
+                        </div>
+
+                        <div class="form__item">
+                            <a href="#" class="form__item--link">¿olvidaste tu contraseña?</a>
+                            <a href="#" class="form__item--link" onclick="validarLogin()">Ingresar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer__container">
+        <div class="footer__container--item">
+            <p>© Copyright 2019 - Todos los derechos reservados.</p>
+            <p>Banco Internacional del Perú S.A.A.</p>
+            <p>Av. Los Pescadores 456, Chimbote, Áncash, Perú</p>
+            <p>RUC: 20123456789</p>
+        </div>
+
+        <div class="footer__container--item">
+            <a href="https://facebook.com" class="footer__item--icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" class="footer__item--icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://youtube.com" class="footer__item--icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://instagram.com" class="footer__item--icon"><i class="fab fa-instagram"></i></a>
+        </div>
+
+    </footer>
+    <script src="../JavaScript/menuHamburguesa.js"></script>
+    <script src="../JavaScript/funciones.js"></script>
+</body>
+</html>

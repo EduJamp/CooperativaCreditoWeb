@@ -1,0 +1,240 @@
+/* Estilos para la pagina de Centro de Ayuda */
+
+@import url('variables.css');
+
+/* Reset universal para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset para cuerpo y tipografía */
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: var(--n);
+  background-color: var(--b);
+  height: 100vh;
+}
+
+/*Usando Metodologia BEM*/
+
+/* Estilos para el Header */
+
+.header {
+    width: 100%;
+    height: auto;
+    background: var(--g3);
+}
+
+.header__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header__item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__item--logo {
+    width: 5rem;
+    height: auto;
+}
+
+.header__item--text {
+    text-align: left;
+    align-self: center;
+}
+
+.header__item--tittle {
+    text-align: center;
+    font: calc(clamp(12px, 2vw, 2rem));
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Estilos para el main */
+.main {
+    background: url("/image/fondocentroayuda.webp");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main__item {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+    width: 400px;
+}
+
+/* Estilos para el section 1 */
+.form__item {
+    margin-bottom: .6rem;
+}
+
+.form__item--label {
+    color: var(--a);
+}
+
+.form__item--select {
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid var(--v3);
+    border-radius: 10px;
+    padding-left: 4px;
+}
+
+.form__item--input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    border-bottom: 2px solid var(--v3);
+    border-radius: 10px;
+    padding-left: 4px;
+    color: var(--g);
+}
+
+.form__item--input::placeholder {
+    color: var(--g);
+}
+
+.form__item--textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    border-bottom: 2px solid var(--v3);
+    border-radius: 10px;
+    padding-left: 4px;
+    color: var(--g);
+    resize: none;
+}
+
+.form__item--textarea::placeholder {
+    color: var(--g);
+}
+
+.form__item--buttom {
+    border: none;
+    border-radius: 10px;
+    padding: 4px 12px;
+    background-color: var(--v3);
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+}
+
+.form__item--text {
+    color: var(--a);
+}
+
+/* Estilos para el aside */
+.main__item:nth-child(2) {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside__item:nth-child(2) {
+    width: 9rem;
+    height: 6.5rem;
+    margin: 10px;
+}
+
+.aside__item--text {
+    color: var(--a);
+    align-self: flex-start;
+}
+
+.aside__item--text:nth-child(2) {
+    text-align: center;
+}
+
+.aside__item--img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos para el Footer */
+.footer__container {
+    background-color: var(--v1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    /* margin-top: 2rem; */
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.footer__conatiner--item {
+    background-color: var(--v1);
+    color: var(--b);
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    margin: 2rem;
+    border-bottom: 2px solid var(--n);
+    width: 300px;
+}
+
+.footer__container--item:nth-child(1) {
+    margin-bottom: 2rem;
+}
+
+.footer__item--icon {
+    width: 40px;
+    margin: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer__item--icon:hover {
+    transform: scale(1.2); /* Efecto al pasar el mouse */
+}
+
+/* Estilo responsivo para tablets */
+@media (min-width: 864px) and (max-width: 1024px) {
+/* Estilos para Header */
+.header__item--tittle {
+    margin-right: 10px;
+}
+
+/* Estilos para main */
+.main__item {
+    padding: 2rem;
+    width: 400px;
+}
+
+.form__item {
+    margin-bottom: 2rem;
+}
+
+.form__item--label {
+    margin-bottom: 10px;
+}
+
+/* Estilos para el aside */
+.aside__item {
+    margin-bottom: 1rem;
+}
+
+.aside__item:nth-child(2) {
+    width: 12rem;
+    height: 15rem;
+}
+}

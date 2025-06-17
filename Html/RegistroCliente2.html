@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/Styles/variables.css">
+    <link rel="stylesheet" href="/Styles/styleRegistroCliente2.css">
+    <link rel="stylesheet" href="/FontAwesome/fontawesome-free-6.7.2-web/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <title>Registro Cliente</title>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__item">
+            <img src="/image/logo.png" alt="logo" class="header__item--logo">
+            <h1 class="header__item--text">LMC Bank</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="main__container">
+            <div class="main__item">
+                <h1 class="main__item--text">Ya Casi Obtinenes Tu Cuenta</h1>
+            </div>
+
+            <div class="main__item">
+                <!-- Cuadro de alerta -->
+                <div id="alertaModal" class="modal">
+                    <div class="modal-content">
+                        <p id="mensajeModal"></p>
+                        <div id="botonesConfirmacion" style="display: none;">
+                            <button onclick="redirigirp2(), cerrarAlerta()">Ir a Login</button>
+                            <!-- <button onclick="cerrarAlerta()">volver</button> -->
+                        </div>
+                        <div id="botonesError" style="display: none;">
+                            <button onclick="cerrarAlerta()">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="" method="post" class="form__container">
+                    <div class="form__container--item">
+                        <h1 class="form__item--tittle">Registro</h1>
+                    </div>
+
+                    <div class="form__container--item">
+                        <label for="operador" class="form__item--label">Operador:</label>
+                        <select name="operador" id="operador" class="form__item--select">
+                            <option value="claro">Claro</option>
+                            <option value="movistar">Movistar</option>
+                            <option value0="entel">Entel</option>
+                            <option value="bitel">Bitel</option>
+                        </select>
+                    </div>
+
+                    <div class="form__container--item">
+                        <label for="pais" class="form__item--label">País:</label>
+                        <select name="pais" id="pais" class="form__item--select">
+                            <option value="peru">Perú</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="chile">Chile</option>
+                            <option value="venezuela">Venezuela</option>
+                            <option value="bolivia">Bolivia</option>
+                            <option value="ecuador">Ecuador</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="paraguay">Paraguay</option>
+                            <option value="uruguay">Uruguay</option>
+                        </select>
+                    </div>
+
+                    <div class="form__container--item">
+                        <label for="telefono" class="form__item--label">Número de Teléfono:</label>
+                        <input type="tel" class="form__item--input" id="telefono" placeholder="Ingrese su Número Teléfonico" required>
+                    </div>
+
+                    <div class="form__container--item">
+                        <label for="user" class="form__item--label">Usuario:</label>
+                        <input type="text" class="form__item--input" id="user" placeholder="Ingrese su Usuario" required>
+                    </div>
+
+                    <div class="form__container--item">
+                        <label for="password" class="form__item--label">Contraseña:</label>
+                        <input type="password" class="form__item--inputpass" id="password" placeholder="******************************" required>
+                        <span class="form__item--span"><i class="fa-solid fa-eye" id="eye" onclick="togglep2()"></i></span>
+                    </div>
+
+                    <div class="form__container--item">
+                        <button type="button" class="form__item--buttom" onclick="validarFormulariop2()">Crear Cuenta</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer__container">
+        <div class="footer__container--item">
+            <p>© Copyright 2019 - Todos los derechos reservados.</p>
+            <p>Banco Internacional del Perú S.A.A.</p>
+            <p>Av. Los Pescadores 456, Chimbote, Áncash, Perú</p>
+            <p>RUC: 20123456789</p>
+        </div>
+
+        <div class="footer__container--item">
+            <a href="https://facebook.com" class="footer__item--icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" class="footer__item--icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://youtube.com" class="footer__item--icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://instagram.com" class="footer__item--icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="/JavaScript/funciones.js"></script>
+</body>
+</html>

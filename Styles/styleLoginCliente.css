@@ -1,0 +1,568 @@
+/* Estilos para la pagina del login del cliente */
+
+@import url('variables.css');
+/* Metodologia BEM */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Estilos para el header */
+.header{
+    width: 100%;
+    height: 4rem;
+    background: var(--v1);
+    position: fixed;
+    z-index: 1;
+}
+
+.header__cont  {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__item {
+    width: 250px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: .3rem;
+}
+
+.header__item--logo {
+    width: 4rem;
+    height: auto;
+}
+
+.header__item--tex {
+    font-size: 2rem;
+}
+
+.header__menu--toggle {
+    width: 2.2rem;
+    height: 1.6rem;
+    background: linear-gradient(var(--n) 20%, transparent 20%, 
+    transparent 40%, var(--n) 40%, var(--n) 60%, transparent 60%, 
+    transparent 80%, var(--n) 80%);
+    margin-right: 1rem;
+}
+
+.header__menu--nav {
+    position: fixed;
+    height: calc(100vh - 4rem);
+    min-width: 50vw;
+    background: var(--az);
+    top: 4rem;
+    right: -80vw;
+
+    &.show {
+        right: 0;
+    }
+}
+
+.list__cont {
+    list-style: none;
+}
+
+.list__item {
+    padding: 1rem;
+    color: var(--g);
+    cursor: pointer;
+}
+
+.list__item--icon {
+    color: var(--g);
+    text-decoration: none;
+}
+
+.list__item:hover {
+    background-color: var(--az);
+    color: var(--b);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.list__item--icon:hover {
+    color: var(--a);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.list__item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--a);
+    transition: width 0.3s ease-in-out;
+}
+
+.list__item:hover::after {
+    width: 100%;
+}
+
+/* Estilos para el Main */
+.main {
+    background: url('/image/LoginImg.webp') no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    padding-top: 4rem;
+}
+
+.main__cont {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.main__item:nth-child(1) {
+    font-size: calc(clamp(14px, 3vw, 3rem));
+    margin: 1rem auto;
+    color: var(--az);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.20);
+}
+
+.main__item:nth-child(2) {
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+
+.form__item--tittle {
+    text-align: center;
+    color: var(--v1);
+}
+
+.form__item {
+    margin: 1rem;
+}
+
+.form__item:nth-child(6) {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__item--select {
+    height: 2rem;
+    width: auto;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    border: none;
+    border-bottom: 2px solid var(--v3);
+    outline: none;
+    color: var(--n);
+}
+
+.form__item--select::placeholder {
+    color: var(--n);
+}
+
+.form__item--select:focus {
+    animation: subrayado 1.5s ease-in-out infinite;
+}
+
+.form__item--label {
+    color: var(--v1);
+}
+
+.form__item--input {
+    width: 100%;
+    height: 2rem;
+    background: transparent;
+    outline: none;
+    border:none;
+    border-radius: 10px;
+    border-bottom: 2px solid var(--v3);
+    color: var(--g);
+}
+
+.form__item--input::placeholder {
+    color: var(--g);
+}
+
+.form__item--input:focus {
+    animation: subrayado 1.5s ease-in-out infinite;
+}
+
+.form__item:nth-child(5) {
+    position: relative;
+}
+
+.form__item--inputpassword {
+    width: 100%;
+    height: 2rem;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 2px solid var(--v3);
+    background: transparent;
+    color: var(--g);
+}
+
+.form__item--inputpassword::placeholder {
+    color: var(--g);
+}
+
+.form__item--inputpassword:focus {
+    animation: subrayado 1.5s ease-in-out infinite;
+}
+
+.form__item--span {
+    position: absolute;
+    right: 7px;
+    transform: translate(0,-50);
+    top: 25.5px;
+    cursor: pointer;
+}
+
+.form__item--link {
+    text-align: center;
+    text-decoration: none;
+    margin: .5rem auto;
+    color: var(--v3);
+}
+
+.form__item--link:nth-child(2) {
+    padding: 4px 18px;
+    background: var(--v3);
+    color: var(--b);
+    border: 2px solid var(--n);
+    border-radius: 10px;
+}
+
+/* Estilos para el cuadro de Alerta */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    margin: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+@keyframes subrayado {
+    0% {
+        border-color: var(--az2);
+    }
+    25% {
+        border-color: var(--a);
+    }
+    50%{
+        border-color: var(--az2);
+    }
+    75%{
+        border-color: var(--a);
+    }
+    100% {
+        border-color: var(--az2);
+    }
+}
+
+/* Estilos para Footer */
+.footer__container {
+    background-color: var(--v1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    /* margin-top: 2rem; */
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.footer__conatiner--item {
+    background-color: var(--v1);
+    color: var(--b);
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    margin: 2rem;
+    border-bottom: 2px solid var(--n);
+    width: 300px;
+}
+
+.footer__container--item:nth-child(1) {
+    margin-bottom: 2rem;
+}
+
+.footer__item--icon {
+    width: 40px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer__item--icon:hover {
+    transform: scale(1.2); /* Efecto al pasar el mouse */
+}
+
+/* Diseño responsivo para tablet */
+@media (min-width: 723px) and (max-width: 1024px) {
+/* Estilos para el Header */
+.header {
+    height: 5rem;
+    position: relative;
+}
+
+.header__item {
+    height: 5rem;
+    padding: 0;
+}
+
+.header__menu--toggle {
+    display: none;
+}
+
+.header__menu--nav{
+    position: absolute;
+    height: 5rem;
+    width: 68vw;
+    background: none;
+    right: 0;
+    top: 0;
+
+    /* &.show {
+        right: none;
+    } */
+}
+
+.list__cont {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow:  row wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.list__item {
+    padding: .5rem;
+    width: auto;
+    color: var(--n);
+}
+
+.list__item--icon {
+    color: var(--az);
+}
+
+.list__item:hover {
+    background-color: var(--v1);
+    color: var(--b);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.list__item--icon:hover {
+    color: var(--b2);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.list__item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--n2);
+    transition: width 0.3s ease-in-out;
+}
+
+.list__item:hover::after {
+    width: 100%;
+}
+
+/* Estilos para Main */
+.main {
+    background-size: 100%;
+    padding: 0;
+}
+
+.main__cont {
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1;
+}
+
+.main__item:nth-child(1) {
+    font-size: 1.3rem;
+    margin: 50px 10px 10px 10px;
+    align-self: flex-start;
+}
+
+/* Estilos Para el Footer */
+.footer__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer__container--item:nth-child(1) {
+    align-self: center;
+    margin: 0;
+}
+
+.footer__item--icon {
+    display: block;
+}
+}
+
+@media (min-width: 1025px) and (max-width: 3840px) {
+/* Estilos para Header */
+.header {
+    height: 5rem;
+    position: relative;
+}
+
+.header__item {
+    height: 5rem;
+    padding: 0;
+}
+
+.header__menu--toggle {
+    display: none;
+}
+
+.header__menu--nav{
+    position: absolute;
+    height: 5rem;
+    width: 68vw;
+    background: none;
+    right: 0;
+    top: 0;
+    
+
+    /* &.show {
+        right: none;
+    } */
+}
+
+.list__cont {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow:  row wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.list__item {
+    width: auto;
+    color: var(--n);
+}
+
+.list__item--icon {
+    color: var(--az);
+    padding: 10rem auto;
+}
+
+.list__item:hover {
+    background-color: var(--v1);
+    color: var(--b);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.list__item--icon:hover {
+    color: var(--b2);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.list__item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--n2);
+    transition: width 0.3s ease-in-out;
+}
+
+.list__item:hover::after {
+    width: 100%;
+}
+
+/* Estilos para Main */
+.main {
+    background-size: 100%;
+    padding: 0;
+}
+
+.main__cont {
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1;
+}
+
+.main__item:nth-child(1) {
+    font-size: 2vw;
+    margin: 50px 10px 10px 10px;
+    align-self: flex-start;
+}
+
+/* Estilos para el Footer */
+.footer__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__container--item:nth-child(1) {
+    align-self: flex-end;
+    margin: 0;
+}
+
+.footer__item--icon {
+    display: inline-block;
+}
+}

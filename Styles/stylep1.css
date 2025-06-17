@@ -1,0 +1,393 @@
+/* Estilos para la pagina principal(primera pagina)*/
+
+@import url('variables.css');
+
+/* Reset universal para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset para cuerpo y tipografía */
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: var(--n);
+  background-color: var(--b);
+  height: 100vh;
+}
+
+/*Usando Metodologia BEM*/
+
+/* Estilos para el Header */
+
+.header__container{
+    width: 100%;
+    height: auto;
+    background-color: var(--v1);
+}
+
+.header__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__item--logo {
+    width: 5rem;
+    height: auto;
+}
+
+.header__item--text {
+    text-align: left;
+    align-self: center;
+}
+
+.header__item--link {
+    text-decoration: none;
+    text-align: center;
+    color: var(--b);
+    background-color: var(--v3);
+    padding: 2px 8px;
+    border: solid 2px;
+    border-color: var(--n);
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+.header__item--link:hover {
+    background-color: var(--g);
+    color: var(--v3);
+    transform: translateX(5px) scale(1.05);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Estilos para el Section 1 */
+.main__container:nth-child(1) {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.banner__container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 400%;
+    height: auto;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.banner__item {
+    width: 100%;
+    list-style: none;  
+    position: relative;
+}
+
+.banner__item--contenido {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner__item--imagen {
+    width: 100%;
+}
+
+.banner__item--text {
+    color: var(--a);
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.banner__item--link {
+    text-decoration: none;
+    background-color: var(--v3);
+    color: var(--b);
+    border: 2px solid;
+    border-color: var(--n);
+    border-radius: 4px;
+    padding: 2px 12px;
+    margin-top: 10vh;
+}
+
+.banner__item--link:hover {
+    background-color: var(--g);
+    color: var(--v3);
+    transform: scale(1.1) rotate(-3deg);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+
+@keyframes slide {
+  0% { margin-left: 0; }
+  20% { margin-left: 0; }
+
+  25% { margin-left: -100%; }
+  45% { margin-left: -100%; }
+
+  50% { margin-left: -200%; }
+  70% { margin-left: -200%; }
+
+  75% { margin-left: -300%; }
+  100% { margin-left: -300%; }
+} 
+
+/* Estilos para el Section 2 */
+.main__container:nth-child(2) {
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.s2container__item {
+    margin: 2rem;
+    background-color: var(--g);
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform .5s ease-in-out;
+}
+
+.s2container__item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.s2__item--mv {
+    margin: 2rem;
+    background-color: var(--g);
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform .5s ease-in-out;
+}
+
+.s2container__item--titulo {
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.s2container__item--descripcion {
+    font-family: cursive;
+    font-weight: none;
+    font-style: oblique;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.s2__item--mv:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.s2container__item--link {
+    text-decoration: none;
+    padding: 4px 8px;
+    margin: 1rem;
+    background-color: var(--n);
+    color: var(--b);
+    border: 2px solid var(--b);
+    border-radius: 6px;
+}
+
+.s2container__item--link:hover {
+    background-color: var(--g);
+    color: var(--n);
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el Footer */
+.footer__container {
+    background-color: var(--v1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.footer__conatiner--item {
+    background-color: var(--v1);
+    color: var(--b);
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    margin: 2rem;
+    border-bottom: 2px solid var(--n);
+    width: 300px;
+}
+
+.footer__container--item:nth-child(1) {
+    margin-bottom: 2rem;
+}
+
+
+
+.footer__item--icon {
+    width: 40px; /* Ajusta el tamaño */
+    margin: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer__item--icon:hover {
+    transform: scale(1.2); /* Efecto al pasar el mouse */
+}
+
+
+/* Diseño responsivo para Tablets */
+@media (min-width: 471px) and (max-width: 1024px) {
+/* Estilos para Header */
+.header__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.header__item {
+    margin: 0 .4rem;
+}
+
+.header__item--link {
+    font-size: .8rem;
+}
+
+/* Estilos para Main */
+/* Estilos para Section 1 */
+.main__container:nth-child(1) {
+    max-height: 70vh;
+}
+
+.banner__container {
+    height: auto;
+    object-fit: cover;
+}
+
+.banner__item--imagen {
+    width: 100%;
+    max-height: 70vh;
+}
+
+.banner__item--text {
+    font-size: 6vw;
+}
+
+/* Estilos para Section 2 */
+.s2container__item {
+    width: 20rem;
+    height: 20rem;
+}
+
+.s2container__item--mv {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.s2__item--mv {
+    width: 20rem;
+    height: 15rem;
+}
+
+/* Estilos para el footer */
+.footer__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.footer__item--icon {
+    display: block;
+}
+
+}
+
+/* Diseño responsivo para laptops y computadoras */
+@media (min-width: 1025px) and (max-width: 3840px) {
+/* Estilos para Header */
+.header__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__item {
+    padding: .5rem 1rem;
+}
+
+.header__item--link {
+    font-size: 1.2rem;
+}
+
+/* Estilos para Main */
+/* Estilos para Section 1 */
+.main__container:nth-child(1) {
+    max-height: 100vh;
+}
+
+.banner__container {
+    height: auto;
+    object-fit: cover;
+}
+
+.banner__item--imagen {
+    width: 100%;
+    max-height: 80vh;
+}
+
+.banner__item--text {
+    font-size: 6vw;
+}
+
+.banner__item--link {
+    font-size: 1.3rem;
+}
+
+/* Estilos para Section 2 */
+.s2container__item {
+    width: 20rem;
+    height: 20rem;
+}
+
+.s2container__item--mv {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.s2__item--mv {
+    width: 20rem;
+    height: 15rem;
+}
+
+/* Estilos para el footer */
+.footer__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__container--item:nth-child(1) {
+    align-self: flex-end;
+    margin: 0;
+}
+
+}
