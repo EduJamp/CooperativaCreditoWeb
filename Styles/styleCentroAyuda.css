@@ -27,6 +27,11 @@ body {
     background: var(--g3);
 }
 
+.header__link--logo{
+    text-decoration: none;
+    color: var(--n);
+}
+
 .header__container {
     display: flex;
     flex-flow: row wrap;
@@ -127,6 +132,13 @@ body {
     color: var(--g);
 }
 
+.form__item:nth-child(5) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .form__item--buttom {
     border: none;
     border-radius: 10px;
@@ -175,7 +187,6 @@ body {
     text-align: center;
     display: flex;
     flex-flow: row wrap;
-    /* margin-top: 2rem; */
     justify-content: space-around;
     align-items: center;
     width: 100%;
@@ -220,6 +231,7 @@ body {
     width: 400px;
 }
 
+/* Estilos para section 1 */
 .form__item {
     margin-bottom: 2rem;
 }
@@ -236,5 +248,52 @@ body {
 .aside__item:nth-child(2) {
     width: 12rem;
     height: 15rem;
+}
+
+/* Estilos para el footer */
+.footer__container--item:nth-child(1) {
+    margin: 0px;
+    align-self: flex-end;
+}
+}
+
+/* Sistema responsivo para patallas de ordenadores */
+@media (min-width: 1025px) and (max-width: 3840px) {
+    /* Estilos para header */
+.header__container{
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+/* Estilos para el main */
+.main__item {
+    padding: 2rem;
+    width: 400px;
+}
+
+/* Estilos para section 1 */
+.form__item {
+    margin-bottom: 2rem;
+}
+
+.form__item--label {
+    margin-bottom: 10px;
+}
+
+/* Estilos para el aside */
+.aside__item {
+    margin-bottom: 1rem;
+}
+
+.aside__item:nth-child(2) {
+    width: 12rem;
+    height: 15rem;
+}
+
+/* Estilos para el footer */
+.footer__container--item:nth-child(1) {
+    margin: 0px;
+    align-self: flex-end;
 }
 }

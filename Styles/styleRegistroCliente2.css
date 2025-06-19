@@ -26,6 +26,11 @@ body {
     background: var(--g3);
 }
 
+.header__link--logo {
+    text-decoration: none;
+    color: var(--n);
+}
+
 .header__item {
     display: flex;
     justify-content: center;
@@ -173,7 +178,7 @@ body {
 }
 
 /* Estilos para el cuadro de Alerta */
-.modal {
+/* .modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -204,7 +209,7 @@ button {
 
 button:hover {
     background-color: #ddd;
-}
+} */
 
 @keyframes subrayado {
     0% {

@@ -248,7 +248,7 @@ body {
 }
 
 /* Estilos para el cuadro de Alerta */
-.modal {
+/* .modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -279,7 +279,7 @@ button {
 
 button:hover {
     background-color: #ddd;
-}
+} */
 
 @keyframes subrayado {
     0% {
@@ -471,7 +471,8 @@ button:hover {
 .header__menu--nav{
     position: absolute;
     height: 5rem;
-    width: 68vw;
+    width: 75vw;
+    margin-right: 5px;
     background: none;
     right: 0;
     top: 0;

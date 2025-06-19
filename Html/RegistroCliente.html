@@ -10,10 +10,12 @@
 </head>
 <body>
     <header class="header">
-        <div class="header__item">
-            <img src="/image/logo.png" alt="logo" class="header__item--logo">
-            <h1 class="header__item--text">LMC Bank</h1>
-        </div>
+        <a href="../index.html" class="header__link--logo">
+            <div class="header__item">
+                <img src="/image/logo.png" alt="logo" class="header__item--logo">
+                <h1 class="header__item--text">LMC Bank</h1>
+            </div>
+        </a>
     </header>
 
     <main class="main">
@@ -25,7 +27,7 @@
 
             <div class="main__item">
                 <!-- Cuadro de alerta -->
-                <div id="alertaModal" class="modal">
+                <!-- <div id="alertaModal" class="modal">
                     <div class="modal-content">
                         <p id="mensajeModal"></p>
                         <div id="botonesConfirmacion" style="display: none;">
@@ -36,7 +38,7 @@
                             <button onclick="cerrarAlerta()">Aceptar</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <form action="" method="post" class="form__container">
                     <div class="form__container--item">
@@ -83,7 +85,7 @@
                     </div>
 
                     <div class="form__container--item">
-                        <button type="button" class="form__item--buttom" onclick="validarFormulario()">Siguiente</button>
+                        <button type="button" class="form__item--buttom">Siguiente</button>
                     </div>
                 </form>
             </div>
@@ -108,6 +110,6 @@
         
     </footer>
 
-    <script src="/JavaScript/funciones.js"></script>
+    <!-- <script src="/JavaScript/funciones.js"></script> -->
 </body>
 </html>
