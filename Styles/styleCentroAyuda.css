@@ -23,27 +23,30 @@ body {
 
 .header {
     width: 100%;
-    height: auto;
     background: var(--g3);
 }
 
-.header__link--logo{
-    text-decoration: none;
-    color: var(--n);
-}
 
 .header__container {
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.header__item {
+.header__item--link{
+    text-decoration: none;
+    color: var(--n);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+}
+
+.header__item:nth-child(1) {
+    width: 300px;
+    height: auto;
 }
 
 .header__item--logo {
@@ -221,8 +224,19 @@ body {
 /* Estilo responsivo para tablets */
 @media (min-width: 864px) and (max-width: 1024px) {
 /* Estilos para Header */
+.header {
+    height: 5rem;
+}
+
+.header__container {
+    height: 5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .header__item--tittle {
-    margin-right: 10px;
+    padding-right: 10px;
+    font-size: 1.8rem;
 }
 
 /* Estilos para main */
@@ -258,12 +272,22 @@ body {
 }
 
 /* Sistema responsivo para patallas de ordenadores */
-@media (min-width: 1025px) and (max-width: 3840px) {
+@media (min-width: 1025px) {
     /* Estilos para header */
+
+.header {
+    height: 6rem;
+}    
+
 .header__container{
+    height: 6rem;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 10px;
+}
+
+.header__item--tittle {
+    padding-right: 10px;
+    font-size: 2.3rem;
 }
 
 /* Estilos para el main */

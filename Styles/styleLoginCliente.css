@@ -306,7 +306,6 @@ button:hover {
     text-align: center;
     display: flex;
     flex-flow: row wrap;
-    /* margin-top: 2rem; */
     justify-content: space-around;
     align-items: center;
     width: 100%;

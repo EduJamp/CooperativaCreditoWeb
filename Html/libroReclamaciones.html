@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/FontAwesome/fontawesome-free-6.7.2-web/css/all.css">
+    <link rel="stylesheet" href="/Styles/libroReclamaciones.css">
+    <link rel="stylesheet" href="/Styles/variables.css">
+    
+    <title>Libro de Reclamaciones</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <a href="../index.html" class="header__item">
+                <img src="/image/logo.png" alt="logo" class="header__item--logo">
+                <h1 class="header__item--tex">LMC Bank</h1>
+            </a>
+
+            <div class="header__item">
+                <h2 class="header__item--tittle">Libro de Reclamaciones virtual</h2>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section__item">
+            <form action="" class="form__container">
+                <div class="form__item">
+                    <div class="form__item--fecha">
+                        <label for="fecha" class="form__item--label">Fecha:</label>
+                        <input type="date" id="fecha" class="form__item--input" required>
+                    </div>
+                    <div class="form__item--buttom">
+                        <button class="form__buttom">Enviar</button>
+                    </div>
+                </div>
+
+                <div class="form__item--text">
+                    <h3 class="form__item--subtitulo">1.- Identificación del reclamante</h3>
+                </div>
+                
+                <div class="form__item">
+                    <label for="nombre" class="form__item--label">Nombres:</label>
+                    <input type="text" id="nombre" class="form__item--input" placeholder="Ingrese sus Nombres" required>
+                </div>
+
+                <div class="form__item">
+                    <label for="apellido" class="form__item--label">Apellidos:</label>
+                    <input type="text" id="apellido" class="form__item--input" placeholder="Ingrese sus Apellidos" required>
+                </div>
+
+                <div class="form__item">
+                    <label for="direccion" class="form__item--label">Domicilio</label>
+                    <input type="text" id="direccion" class="form__item--input" placeholder="Ingrese su dirección" required>
+                </div>
+                
+                <div class="form__item">
+                    <div class="form__item--docIdent">
+                        <label for="tipodoc" class="form__item--label">Tipo de Documento:</label>
+                        <select name="tipdoc" id="tipodoc" class="form__item--select">
+                            <option value="dni" class="select__item">DNI</option>
+                            <option value="pasaporte" class="select__item">Pasaporte</option>
+                            <option value="carnet_extranjeria" class="select__item">Carnet de Extranjeria</option>
+                        </select>
+                    </div>
+
+                    <div class="form__item--docIdent">
+                        <label for="numdoc" class="form__item--label">Número de Documento:</label>
+                        <input type="text" id="numdoc" class="form__item--input" placeholder="Ingrese su número" required>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item--telefono">
+                        <label for="telefono" class="form__item--label">Telefono:</label>
+                        <input type="tel" id="telefono" placeholder="Ingrese su número de telefono" class="form__item--input" required>
+                    </div>
+
+                    <div class="form__item--email">
+                        <label for="email" class="form__item--label">E-mail:</label>
+                        <input type="email" id="email" placeholder="Ingrese su correo de gmail" class="form__item--input" required>
+                    </div>
+                </div>
+                
+                <div class="form__item--text">
+                    <h3 class="form__item--subtitulo">2.- Identificación del bien contratado</h3>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item--reclamo">
+                        <h4 class="form__subt">Tipo de Mensaje</h4>
+
+                        <label class="form__content--radio">
+                        <input type="radio" name="tipo1" value="reclamo" class="form__radio--input" checked>
+                        <span class="form__radio-label">Problema con el servicio</span>
+                        </label>
+
+                        <label class="form__content--radio">
+                        <input type="radio" name="tipo1" value="reclamo" class="form__radio--input" >
+                        <span class="form__radio-label">Sugenrencia o Malestar</span>
+                        </label>
+                    </div>
+
+                    <div class="form__item--reclamo">
+                        <h4 class="form__subt">Motivo de contacto</h4>
+
+                        <label class="form__content--radio">
+                        <input type="radio" name="tipo2" value="reclamo" class="form__radio--input" checked>
+                        <span class="form__radio-label">Producto o Servicio</span>
+                        </label>
+
+                        <label class="form__content--radio">
+                        <input type="radio" name="tipo2" value="reclamo" class="form__radio--input" >
+                        <span class="form__radio-label">Atención recibida</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form__item--reclamo">
+                        <h4 class="form__subt">¿Qué deseas reportar?</h4>
+
+                        <label class="form__content--radio">
+                        <input type="radio" name="tipo3" value="reclamo" class="form__radio--input" checked>
+                        <span class="form__radio-label">Incidencia con el servicio</span>
+                        </label>
+
+                        <label class="form__content--radio">
+                        <input type="radio" name="tipo3" value="reclamo" class="form__radio--input" >
+                        <span class="form__radio-label">Inconformidad con la atención</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form__item--text">
+                    <h3 class="form__item--subtitulo">3.- Detalles de la queja o reclamo</h3>
+                </div>
+
+                <div class="form__item">
+                    <textarea name="descripcion" id="problema" class="form__item--textarea" placeholder="Ingrese el motivo de su problema, explicar a detalle" required></textarea>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer__container">
+        <div class="footer__container--item">
+            <p>© Copyright 2019 - Todos los derechos reservados.</p>
+            <p>Banco Internacional del Perú S.A.A.</p>
+            <p>Av. Los Pescadores 456, Chimbote, Áncash, Perú</p>
+            <p>RUC: 20123456789</p>
+        </div>
+
+        <div class="footer__container--item">
+            <a href="https://facebook.com" class="footer__item--icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" class="footer__item--icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://youtube.com" class="footer__item--icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://instagram.com" class="footer__item--icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

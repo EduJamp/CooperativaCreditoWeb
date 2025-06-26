@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/FontAwesome/fontawesome-free-6.7.2-web/css/all.css">
+    <link rel="stylesheet" href="/Styles/variables.css">
+    <link rel="stylesheet" href="/Styles/loginTrabajador.css">
+    <title>Login Trabajador</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__item">
+                <img src="/image/logo.png" alt="logo" class="header__item--logo">
+                <h1 class="header__item--tex">LMC Bank</h1>
+            </div>
+            <div class="header__item--toggle" id="menu__toggle"></div>
+            <nav class="header__item--nav" id="menu__nav">
+                <ul class="list__cont">
+                    <li class="list__item"><a href="/Html/CentroAyuda.html" class="list__item--icon" title="ir a centro de ayuda"><i class="fa-regular fa-envelope"></i>Centro de Ayuda</a></li>
+                    <li class="list__item"><a href="#" class="list__item--icon" title="ir a libro de reclamaciones"><i class="fa-regular fa-address-book"></i>Libro de Reclamaciones</a></li>
+                    <li class="list__item"><a href="#" class="list__item--icon" title="ir a ubicacion"><i class="fa-solid fa-magnifying-glass-location"></i>Puntos de Ubicación</a></li>
+                    <li class="list__item"><a href="/Html/RegistroCliente.html" class="list__item--icon" title="ir a ubicacion"><i class="fa-solid fa-user-plus"></i>Crear Cuenta</a></li>
+                    <li class="list__item"><a href="../index.html" class="list__item--icon" title="ir a ubicacion"><i class="fa-solid fa-house-chimney"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section__container">
+            <div class="section__item">
+                <h1 class="section__item--text">Bienvenido Colaborador</h1>
+                <h1 class="section__item--text">Estamos Felices de tenerte en nuestra Familia</h1>
+            </div>
+
+            <div class="section__item">
+                <form action="" class="section__item--form">
+                    <div class="form__item">
+                        <h1 class="form__item--tittle">Inicia Sesión</h1>
+                    </div>
+                    
+                    <div class="form__item">
+                        <label for="tipdoc" class="form__item--label">Tipo de Documento:</label>
+                        <select name="tipdoc" id="tipdoc" class="form__item--select">
+                            <option value="dni">DNI</option>
+                            <option value="carnet de extranjeria">Carnet de Extranjeria</option>
+                            <option value="pasaporte">Pasaporte</option>
+                        </select>
+                    </div>
+
+                    <div class="form__item">
+                        <label for="numdoc" class="form__item--label">Número de Documento:</label>
+                        <input type="text" class="form__item--input" id="numdoc" placeholder="Ingresa tu número de documento" required>
+                    </div>
+
+                    <div class="form__item">
+                        <label for="user" class="form__item--label">Usuario:</label>
+                        <input type="email" class="form__item--input" id="user" placeholder="Ingresa tu nombre de usuario" required>
+                    </div>
+
+                    <div class="form__item">
+                        <label for="passwords" class="form__item--label">Contraseña:</label>
+                        <input type="password" class="form__item--inputpassword" id="passwords" placeholder="***********************" required>
+                        <span class="form__item--span"><i class="fa-solid fa-eye" id="eye" onclick="toggle()"></i></span>
+                    </div>
+
+                    <div class="form__item">
+                        <a href="#" class="form__item--link">¿olvidaste tu contraseña?</a>
+                        <button class="form__item--buttom">Ingresar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer__container">
+        <div class="footer__container--item">
+            <p>© Copyright 2019 - Todos los derechos reservados.</p>
+            <p>Banco Internacional del Perú S.A.A.</p>
+            <p>Av. Los Pescadores 456, Chimbote, Áncash, Perú</p>
+            <p>RUC: 20123456789</p>
+        </div>
+
+        <div class="footer__container--item">
+            <a href="https://facebook.com" class="footer__item--icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" class="footer__item--icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://youtube.com" class="footer__item--icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://instagram.com" class="footer__item--icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    <script src="/JavaScript/loginTrabajador.js"></script>
+</body>
+</html>

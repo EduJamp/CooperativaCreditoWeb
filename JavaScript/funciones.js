@@ -193,3 +193,13 @@
     });
     }
                             
+
+    /* autocolocar fecha */
+    /*<input type="date" id="fecha">
+
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const hoy = new Date().toISOString().split('T')[0];
+        document.getElementById('fecha').value = hoy;
+    });
+    </script>*/
